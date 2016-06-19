@@ -6,6 +6,8 @@ Basic curriculum for modern computing
 
 ## 0 - Overview of Computing
 
+- Introduction
+
 - Computer Architecture
     - Hardware
     - Kernel
