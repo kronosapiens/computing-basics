@@ -83,7 +83,24 @@ Same information, different representation. More bits require more memory to sto
 
 ### Hardware Architecture
 
-Binary can be used to represent numbers, but that is far from all it can do. Binary is a code, and as such can be used to represent almost anything: commands, locations, any data. A running computer is engaged in a never-ending cycle of **fetching and executing instructions**. This flow of instruction and execution is ultimately how computers do what they do, which is perform calculations and move data around in memory.
+Binary can be used to represent numbers, but that is far from all it can do. Binary is a code, and as such can be used to represent almost anything: commands, locations, or data. A running computer is engaged in a never-ending cycle of **fetching and executing instructions**. This flow of instruction and execution is ultimately how computers do what they do, which is perform calculations and move data around in memory.
+
+#### Tick Tock
+
+To understand how a computer's hardware works, we'll begin with the idea of a "[system clock](https://en.wikipedia.org/wiki/System_time)". Every computer has one, and this clock serves two very important purposes: *keeping track of earth time* and *coordinating activity throughout the computer*. It is this second purpose that interests us.
+
+To get a sense of how a computer understands time, we introduce the idea of a "cycle", consisting of a "tick" phase and a "tock" phase. Not all chips in the computer require a notion of time -- the boolean logic chips discussed above have no notion of time. At any point in time, the state of the inputs determine the state of the outputs. For other chips, including importantly memory chips, the notion of time becomes crucial. Further, complex chips consist of multiple smaller chips, often including some that are time-sensitive, making the complex chip time-sensitive.
+
+For time-sensitive chips, their behavior is divided into two phases. In the "tick" phase, these chips read from their input pins. In the "tock" phase, these chips emit the correct outputs given the inputs. This is one cycle. In the next "tick" phase, they read their next inputs, and then emit the proper outputs, and so on and so forth. The system clock coordinates these cycles across the computer, allowing for very complex interactions.
+
+#### Memory
+
+These time-sensitive chips form the foundation of computer memory. Imagine a chip with three input pins: two labeled "in1" and "in2", and the last labeled "read". It has one output pin: "out". This output pin, however, is forked: one fork points outward, where it can in theory connect to anything. The other fork, however, connects to "in2", forming a loop. The "in1" and "read" chips are connected to the outside. The function of the chip is simple: during the "tick" phase, if "read" is set to 0, then the chip reads from the "in2" pin. Otherwise, it reads from the "in1" pin. During the "tock" phase, it sends the input through to the "out" pin.
+
+Imagine if "in1" and "read" were set to 1 for a single cycle: the 1 would be read into the chip, which would output 1 in the "tock" phase, which would also be the value of "in2" in the **next** "tick" phase. If "read" were set to 0 from then on, the 1 would keep circulating through this loop, since nothing else would ever be accepted from "in1". This is a simple type of memory.
+
+
+
 
 
 
