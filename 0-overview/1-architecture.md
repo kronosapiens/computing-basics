@@ -100,8 +100,11 @@ These time-sensitive chips form the foundation of computer memory. Imagine a chi
 Imagine if "in1" and "read" were set to 1 for a single cycle: the 1 would be read into the chip, which would output 1 in the "tock" phase, which would also be the value of "in2" in the **next** "tick" phase. If "read" were set to 0 from then on, the 1 would keep circulating through this loop, since nothing else would ever be accepted from "in1". This is a simple type of memory.
 
 
+## Kernel
 
+## Operating System
 
+## Software
 
 
 
