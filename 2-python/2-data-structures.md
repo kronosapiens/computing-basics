@@ -8,6 +8,42 @@ Lists are great when you have a handful of homogeneous or ordered items that you
 ['john', 'paul', 'george', 'ringo']
 ```
 
+Lists have the following (unsurprising) properties:
+
+1. Length
+2. Contents
+
+Here is an example of a list in action:
+
+```
+>>> mylist = [1,2,3]
+>>> len(mylist)
+3
+>>> mylist[0]
+1
+>>> mylist[2]
+3
+>>> mylist[3]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>> mylist.append('cat')
+>>> mylist
+[1, 2, 3, 'cat']
+>>> mylist[3]
+'cat'
+>>> len(mylist)
+4
+```
+
+A few things going on here:
+
+First thing to note: a list is "zero-indexed", meaning that the first element in the list is accessed with `0`, the second element with `1`, etc. Zero-indexing is very common in computer science; it may seem strange at first but will soon become second nature.
+
+Next, see what happens when trying to access an element of the list that isn't there -- Python will "throw an exception", in this case an `IndexError`.
+
+Last, note that you can add elements to a list using the `append` method. There are other ways of constructing and extending lists; these are just the basics.
+
 ## The Dictionary
 
 With lists, you access objects by their **location**. This is great when order matters, but there are lots of situations where order doesn't matter. In those situations, you usually want to access an objects by some sort of **key**.
@@ -21,5 +57,44 @@ The dictionary has the property that every item is associated with a key. You us
     'name': 'Isaac Harper'
     'uni': 'ish2321'
     'age': 27
+    'city': 'Brooklyn'
 }
 ```
+
+Dicts have the following properties:
+
+1. Keys
+2. Values
+3. Length
+
+Here is an example of a dict in action:
+
+```
+>>> mydict = {'name': 'Daniel Kronovet'}
+>>> mydict
+{'name': 'Daniel Kronovet'}
+>>> mydict['email'] = 'dbk2123@gmail.com'
+>>> mydict
+{'name': 'Daniel Kronovet', 'email': 'dbk2123@gmail.com'}
+>>> mydict['ssn']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'ssn'
+>>> mydict['email']
+'dbk2123@gmail.com'
+>>> mydict['email'] = 'kronovet@gmail.com'
+>>> mydict['email']
+'kronovet@gmail.com'
+>>> len(mydict)
+2
+>>> mydict.keys()
+['name', 'email']
+>>> mydict.values()
+['Daniel Kronovet', 'dbk2123@gmail.com']
+```
+
+A few things going on here:
+
+First, note that you assign and access values by passing a key. A key can be anything -- a string, an integer, or even another object. Keys are commonly strings, as strings have more semantic power than integers.
+
+Observe that the value for a given key can be updated as often as necessary. Note also that attempting to access a value that does not exist (i.e. there is not value for that key) will result in a `KeyError`.
