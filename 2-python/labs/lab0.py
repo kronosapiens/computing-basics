@@ -20,7 +20,7 @@ myList = []
 ###################
 ### Your code here!
 
-myList = [1,1,4,4]
+
 
 ###################
 
@@ -47,14 +47,14 @@ mage = {'name': 'Gandalf'}
 ###################
 ### Your code here!
 
-fighter['ability'] = 'slash'
-fighter['power'] = 10
 
-archer['ability'] = 'shoot'
-archer['power'] = 5
 
-mage['ability'] = 'flame'
-mage['power'] = 10
+
+
+
+
+
+
 
 ###################
 

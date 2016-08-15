@@ -20,7 +20,7 @@ def myMean(numbers):
     ###################
     ### Your code here!
 
-    mean = sum(numbers) / len(numbers)
+
 
     ###################
     return mean

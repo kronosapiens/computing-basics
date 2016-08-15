@@ -42,11 +42,11 @@ def gpaMean(students):
     # for element in iterable:
     #     <something involving element>
 
-    gpaSum = 0
-    for student in students:
-        gpaSum += student['gpa']
 
-    mean = gpaSum / len(students)
+
+
+
+
 
     ###################
     return mean
@@ -72,14 +72,14 @@ def gpaMeanMale(students):
     # else:
     #     <do another thing>
 
-    gpaSum = 0
-    numMales = 0
-    for student in students:
-        if student['gender'] == 'M':
-            gpaSum += student['gpa']
-            numMales += 1
 
-    mean = gpaSum / numMales
+
+
+
+
+
+
+
 
     ###################
     return mean
