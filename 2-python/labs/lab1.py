@@ -20,17 +20,12 @@ def myMean(numbers):
     ###################
     ### Your code here!
 
-
-
-
-
-
+    mean = sum(numbers) / len(numbers)
 
     ###################
     return mean
 
-assert myMean(myNumbers) == 4.0, 'Incorrect mean!'
-
+assert (myMean(myNumbers) - 4.0) < .0001, 'Mean wrong or not precise!'
 
 '''
 Exercise 2: Means II
@@ -41,7 +36,7 @@ In this (short) exercise, you will use an outside module to gain specialized
 
 from statistics import mean
 
-assert mean(myNumbers) == 4.0
+assert (mean(myNumbers) - 4.0) < .0001
 
 
 print('Lab 1 complete!')

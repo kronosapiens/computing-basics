@@ -20,11 +20,7 @@ myList = []
 ###################
 ### Your code here!
 
-
-
-
-
-
+myList = [1,1,4,4]
 
 ###################
 
@@ -51,19 +47,22 @@ mage = {'name': 'Gandalf'}
 ###################
 ### Your code here!
 
+fighter['ability'] = 'slash'
+fighter['power'] = 10
 
+archer['ability'] = 'shoot'
+archer['power'] = 5
 
-
-
-
+mage['ability'] = 'flame'
+mage['power'] = 10
 
 ###################
 
-heros = [figher, archer, mage]
+heros = [fighter, archer, mage]
 
 for hero in heros:
-    assert hasattr(hero, 'ability'), 'Hero has no magical ability!'
-    assert hasattr(hero, 'power'), 'Ability has no power!'
+    assert 'ability' in hero, 'Hero has no magical ability!'
+    assert 'power' in hero, 'Ability has no power!'
 
 assert sum(hero['power'] for hero in heros) == 25, 'Powers do not sum to 25!'
 

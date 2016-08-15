@@ -21,17 +21,17 @@ myStudents = [
     {
         'name': 'Leto',
         'gender': 'M',
-        'GPA': 3.5
+        'gpa': 3.5
     },
     {
         'name': 'Jessica',
         'gender': 'F',
-        'GPA': 3.9
+        'gpa': 3.9
     },
     {
         'name': 'Paul',
         'gender': 'M',
-        'GPA': 4.0
+        'gpa': 4.0
     },
 ]
 
@@ -41,6 +41,12 @@ def gpaMean(students):
 
     # for element in iterable:
     #     <something involving element>
+
+    gpaSum = 0
+    for student in students:
+        gpaSum += student['gpa']
+
+    mean = gpaSum / len(students)
 
     ###################
     return mean
@@ -65,6 +71,15 @@ def gpaMeanMale(students):
     #     <do something>
     # else:
     #     <do another thing>
+
+    gpaSum = 0
+    numMales = 0
+    for student in students:
+        if student['gender'] == 'M':
+            gpaSum += student['gpa']
+            numMales += 1
+
+    mean = gpaSum / numMales
 
     ###################
     return mean
