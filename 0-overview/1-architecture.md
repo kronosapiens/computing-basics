@@ -99,15 +99,34 @@ These time-sensitive chips form the foundation of computer memory. Imagine a chi
 
 Imagine if "in1" and "read" were set to 1 for a single cycle: the 1 would be read into the chip, which would output 1 in the "tock" phase, which would also be the value of "in2" in the **next** "tick" phase. If "read" were set to 0 from then on, the 1 would keep circulating through this loop, since nothing else would ever be accepted from "in1". This is a simple type of memory.
 
-
 ## Kernel
+
+The **[kernel](https://en.wikipedia.org/wiki/Kernel_(operating_system))** is a very important piece of software in a computer. It's generally the lowest-level piece of software, and the one that directly controls the hardware on the computer.
+
+All other processes on your computer ultimately make requests to the kernel for resources (memory, CPU time, etc), and the kernel is responsible for scheduling all of these tasks and keeping the computer from crashing.
+
+Kernels are hugely important, but it is unlikely you will work with them directly any time in the near future.
+
+![kernel](https://en.wikipedia.org/wiki/Kernel_(operating_system)#/media/File:Kernel_Layout.svg)
 
 ## Operating System
 
+The **[operating system](https://en.wikipedia.org/wiki/Operating_system)** or OS consists of the kernel and a large number of other utilities, with the goal of providing a friendly interface to the user. Popular operating systems include Unix and variants, Apple OSX, and Microsoft Windows.
+
+Operating systems must be run on computer hardware; not all hardware can run all operating systems. In general, OSX runs only on Apple computers, while Windows and Unix can be run on a wider variety of computers. Newer operating systems require newer hardware, and so on.
+
 ## Software
 
+On top of the OS rests all the other software you care about: software you download from the internet, software you buy in the store, software you write yourself.
 
+This software can do basically anything you want, provided it is written to run on the operating system you're using.
 
+# Takeaways
 
+The main takeaways from this section are:
+
+1. Hardware -> Kernel + Operating System -> User Software
+
+2. As a programmer, you will be writing software and will be interacting with the operating system. The kernel and hardware will generally not be important for you, but you should know they exist and the role they play.
 
 

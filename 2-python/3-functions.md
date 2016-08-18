@@ -42,10 +42,14 @@ def square(x):
 Here, we have taken the squaring operation and captured it inside a function. Now, whenever we need to square a number, we simply call `square(x)` and have our answer. Without this function, we would have to write `x * x` every time we wanted a square. In this simple case, it might seem like writing `x * x` every time might not be such a bad thing. But functions can get complicated, and capturing them as functions is an absolutely crucial skill in programming. Consider another example:
 
 ```
-def mean(num_list):
-    sum(num_list) / float(len(num_list))
+def max(num_list):
+    max_so_far = -inf
+    for num in num_list:
+        if num > max_so_far:
+            max_so_far = num
+    return max_so_far
 ```
 
-Here, taking the mean of a list of numbers requires performing a handful of operations. Having access to the `mean` functions speeds things up enormously.
+Here, finding the max of a list of numbers requires performing a handful of operations. Having access to the `max` functions speeds things up enormously.
 
 Another benefit of functions is that they can be used to define **interfaces** between parts of your program. When other parts of your code only know about a single function, then it becomes much easier to catch and fix bugs, as well as make large-scale changes and modifications to your code. Using functions to define interfaces is also a crucial programming skill.

@@ -33,3 +33,20 @@ In this example, we have a "cash register" which can add and remove items, apply
 
 
 # Modularity
+
+Imagine that you are a president in charge of a government. You have thousands of government employees, hundreds of officials, and dozens of major branches. You need to somehow coordinate the activity of the whole government.
+
+One approach would be having everyone in the government talk to everyone else. This approach would be inefficient, and highly error prone. Changes in policy would take a very long time to get spread throughout the government, and employees would often be acting on bad information. Resources would generally not be where they were needed, and changing plans would be hard.
+
+A better approach would be to designate certain groups of employees for specific problems, having one agency be in charge of transportation, another in charge of education, yet another in charge of foreign policy. Each of these agencies would be run by a relatively small team of officials. These officials would communicate with you, and each other, and relay new plans to their employees. Such a model would be much easier to maintain, adding or removing agencies as needed. New information would lead to new strategies, which could be carried out by coordinating with the officials, who could then carry out orders with their agencies.
+
+Experience shows that the second model has found favor with real-world organizations; parallel attitudes hold when creating software.
+
+The key idea is that software is too complicated to hold in your head all at once, and so the best way to make programming manageable is to keep different parts of your program **very separate**. When you separate our parts of your program into different pieces (let's call them **modules**), then you can work on one without having to think about how the other ones work. Instead of having to hold the whole project in your head to be able to make changes, you only have to think of a single piece.
+
+
+# Interfaces
+
+Closely linked to the idea of modules is the idea of **interfaces**, or the way that modules communicate with each other. The gold star in software is the **simple, stable interface**, hiding complex behavior behind a simple set of commands.
+
+Let's consider the transporation department. They develop a technology for finding the most efficient route between two points, and they make this technology available to everyone. The interface is simple: enter a starting address, and an ending address, and the tool does the rest. The actual algorithm for finding the route is complex, and researchers are constantly working to make it better. As long as the interface remains the same, however, no users of the tool have to know about the changes happening under the hood. Furthermore, the makers of the tool don't have to know about how the tool is being used. The *simple, stable interface* makes this possible.
