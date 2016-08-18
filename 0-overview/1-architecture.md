@@ -107,7 +107,7 @@ All other processes on your computer ultimately make requests to the kernel for 
 
 Kernels are hugely important, but it is unlikely you will work with them directly any time in the near future.
 
-![kernel](https://en.wikipedia.org/wiki/Kernel_(operating_system)#/media/File:Kernel_Layout.svg)
+![kernel](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Kernel_Layout.svg/304px-Kernel_Layout.svg.png)
 
 ## Operating System
 
