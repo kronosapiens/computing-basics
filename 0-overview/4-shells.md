@@ -147,3 +147,7 @@ Here, the flow of information would go as follows:
 `stdin` -> program1 -> program2 -> `stdout`
 
 This is useful as it allows you to combine simple programs to create more complicated programs, which some people think is a good idea. For more on this, and on Unix in general, [check out this classic video](https://www.youtube.com/watch?v=tc4ROCJYbm0).
+
+# More Practice
+
+If you would like more practice working with the shell, Codecademy has a free curriculum: https://www.codecademy.com/learn/learn-the-command-line

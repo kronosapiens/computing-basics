@@ -4,11 +4,38 @@ As you may recall from the earlier section on community, one of the key non-prog
 
 This code is organized into units known as **"packages"** or **"libraries"**, and can consist of one or more **"modules"**. These terms have come up earlier in this curriculum.
 
-In Python, these libraries come in two flavors: as part of the Python Standard Library, or as a third-party library downloadable from the internet.
+In Python, these libraries come in three flavors: as part of the Python Standard Library, as a third-party library downloadable from the internet, or as code you've written yourself.
 
 Every installation of Python comes with the **[Python Standard Library](https://docs.python.org/2/library/)**, a set of key modules that are often useful for programming in Python. Everything in the standard library is already installed on your computer, making it very easy to use. Further, every Python installation includes these libraries, so code which relies on them is virtually guaranteed to run on anyone's computer.
 
 Beyond the standard library is a massive collection of third-party libraries, organized using the **[Python Package Index]**(https://pypi.python.org/pypi), or PyPI. To install and manage these third-party libraries, we use a tool known as a "package manager", which for Python is a tool called [`pip`](https://en.wikipedia.org/wiki/Pip_(package_manager)).
+
+Finally, you can write and re-use your own modules; a very common practice.
+
+## Import Syntax
+
+First, let's discuss the syntax for importing modules:
+
+Importing the entire module:
+
+```
+import <module>
+<module>.<function>
+```
+
+Importing a function from the module:
+
+```
+from <module> import <function>
+<function>
+```
+
+Importing all functions in the module:
+
+```
+from <module> import *
+<function>
+```
 
 ## Standard Library
 
@@ -94,3 +121,31 @@ Out[2]: 6
 In [3]: Out[2] * 2
 Out[3]: 12
 ```
+
+## Personal Modules
+
+Modules in the standard library, as well as those installed with `pip`, all ultimately live as files on your computer. It stands to reason that modules you write yourself, also being files on your computer, should be importable as well. And they are!
+
+As an example, let's imagine the following files in the current working directory:
+
+```
+prog1.py
+prog2.py
+utilities.py
+```
+
+You're writing two programs, `prog1.py` and `prog2.py`. There is code that you want to re-use between both programs, which you put in the file `utilities.py`. You can import this code using the same syntax you use to import any module:
+
+```
+import utilities
+utilities.foo()
+```
+
+OR
+
+```
+from utilities import foo
+foo()
+```
+
+There are some details about import paths which will become relevant if you are trying to import code across larger distances, which are discussed more [here](http://kronosapiens.github.io/blog/2014/07/28/understanding-package-imports-in-python.html).

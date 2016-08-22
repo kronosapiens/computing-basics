@@ -23,6 +23,8 @@ Here is an example of a list in action:
 1
 >>> mylist[2]
 3
+>>> mylist[0:2]
+[1,2]
 >>> mylist[3]
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -39,6 +41,8 @@ IndexError: list index out of range
 A few things going on here:
 
 First thing to note: a list is "zero-indexed", meaning that the first element in the list is accessed with `0`, the second element with `1`, etc. Zero-indexing is very common in computer science; it may seem strange at first but will soon become second nature.
+
+Next, note how you can pass two values separated by a colon to select a subset of the list. The first element of the subset will be the element indexed by the first value; the last element of the subset will be the element **before** the element indexed by the last value.
 
 Next, see what happens when trying to access an element of the list that isn't there -- Python will "throw an exception", in this case an `IndexError`.
 
