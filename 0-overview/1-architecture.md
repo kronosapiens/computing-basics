@@ -4,9 +4,9 @@ If one wants to use computers effectively, it is helpful to have some insight in
 
 In this chapter, we will discuss the architecture of a computer, and point out some of the key ideas underlying the various components.
 
-## Hardware
+# Hardware
 
-### Building Blocks
+## Building Blocks
 
 Ultimately, computers are nothing but billions of coordinated electric impulses. The reasons why computers are valuable is that these electric impulses are being **coordinated** in order to perform meaningful knowledge work. This work is accomplished by means of something known as **Boolean Logic**. Boolean logic is a very simple yet powerful tool for making decisions. Here are some examples:
 
@@ -38,7 +38,7 @@ As it happens, it is possible to combine simple logic gates to create new, "comp
 
 From here, it is not such a leap to develop chips capable of performing addition and even more complicated operations. More complicated chips, however, require more input and output wires. Keeping track of these wires, however, requires a new language.
 
-### Binary
+## Binary
 
 To work with these electric impulses, computer programmers developed a language of ones and zeros, known as binary. 0 corresponds to off/false, and 1 corresponds to on/true.
 
@@ -81,29 +81,36 @@ Same information, different representation. More bits require more memory to sto
 | 32 | 2^32 = 4,294,967,296 |
 | 64 | 2^64 = 18,446,744,073,709,551,616 |
 
-### Hardware Architecture
+## Hardware Architecture
 
 Binary can be used to represent numbers, but that is far from all it can do. Binary is a code, and as such can be used to represent almost anything: commands, locations, or data. A running computer is engaged in a never-ending cycle of **fetching and executing instructions**. This flow of instruction and execution is ultimately how computers do what they do, which is perform calculations and move data around in memory.
 
-#### Tick Tock
+The following are the major components of a computer's hardware:
 
-To understand how a computer's hardware works, we'll begin with the idea of a "[system clock](https://en.wikipedia.org/wiki/System_time)". Every computer has one, and this clock serves two very important purposes: *keeping track of earth time* and *coordinating activity throughout the computer*. It is this second purpose that interests us.
+### CPU
 
-To get a sense of how a computer understands time, we introduce the idea of a "cycle", consisting of a "tick" phase and a "tock" phase. Not all chips in the computer require a notion of time -- the boolean logic chips discussed above have no notion of time. At any point in time, the state of the inputs determine the state of the outputs. For other chips, including importantly memory chips, the notion of time becomes crucial. Further, complex chips consist of multiple smaller chips, often including some that are time-sensitive, making the complex chip time-sensitive.
+The CPU, or Central Processing Unit, is the computational core of a computer. This chip is designed to:
 
-For time-sensitive chips, their behavior is divided into two phases. In the "tick" phase, these chips read from their input pins. In the "tock" phase, these chips emit the correct outputs given the inputs. This is one cycle. In the next "tick" phase, they read their next inputs, and then emit the proper outputs, and so on and so forth. The system clock coordinates these cycles across the computer, allowing for very complex interactions.
+1. Receive as input data and instructions.
+2. Perform actions on the data based on the instructions.
+3. Send the result elsewhere for further work.
 
-#### Memory
+A single CPU "core" can in general execute one instruction at a time. "Multi Core" computers have multiple CPU chips, allowing them to execute multiple instructions in parallel.
 
-These time-sensitive chips form the foundation of computer memory. Imagine a chip with three input pins: two labeled "in1" and "in2", and the last labeled "read". It has one output pin: "out". This output pin, however, is forked: one fork points outward, where it can in theory connect to anything. The other fork, however, connects to "in2", forming a loop. The "in1" and "read" chips are connected to the outside. The function of the chip is simple: during the "tick" phase, if "read" is set to 0, then the chip reads from the "in2" pin. Otherwise, it reads from the "in1" pin. During the "tock" phase, it sends the input through to the "out" pin.
+### Memory
 
-Imagine if "in1" and "read" were set to 1 for a single cycle: the 1 would be read into the chip, which would output 1 in the "tock" phase, which would also be the value of "in2" in the **next** "tick" phase. If "read" were set to 0 from then on, the 1 would keep circulating through this loop, since nothing else would ever be accepted from "in1". This is a simple type of memory.
+Much of the rest of a computer consists of various places to store data -- memory. This memory comes in many forms, and plays many roles:
+
+- RAM (Random Access Memory) is a type of memory that can be accessed quickly and in any order. RAM is generally used to store the results of calculations while the computer is running various programs.
+- Hard drives are a type of memory that is slower to access and must be read in sequential blocks, but is also significantly cheaper. These drives are generally used for main storagae of data.
+
+These are the main classes, but there are many more. For example, there is a piece of memory dedicated to holding a running program: after all, instructions themselves need to be read from memory somewhere.
 
 ## Kernel
 
-The **[kernel](https://en.wikipedia.org/wiki/Kernel_(operating_system))** is a very important piece of software in a computer. It's generally the lowest-level piece of software, and the one that directly controls the hardware on the computer.
+The **[kernel](https://en.wikipedia.org/wiki/Kernel_(operating_system))** is a very important piece of software in a computer. It's generally the lowest-level piece of software, and the one that directly controls the hardware on the computer (physically reading from memory, sending instructions to the CPU, and so on)
 
-All other processes on your computer ultimately make requests to the kernel for resources (memory, CPU time, etc), and the kernel is responsible for scheduling all of these tasks and keeping the computer from crashing.
+All other processes on your computer ultimately make requests to the kernel for resources (memory, CPU time, etc), and the kernel is responsible for scheduling and coordinating all of these tasks and keeping the computer from crashing.
 
 Kernels are hugely important, but it is unlikely you will work with them directly any time in the near future.
 
