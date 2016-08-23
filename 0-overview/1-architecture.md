@@ -46,8 +46,8 @@ As it happens, it is possible to combine simple logic gates to create new, "comp
 
 Here is the truth table for MULTIPLEX:
 
-| a | b | switch | output |
-|---|---|--------|--------|
+| a | b | sw | out |
+|---|---|----|-----|
 | 0 | 0 | 0 | 0 |
 | 0 | 1 | 0 | 0 |
 | 1 | 0 | 0 | 1 |
