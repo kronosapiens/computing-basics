@@ -78,17 +78,15 @@ For Linux-style command line interfaces
 
 Note that in this program reference, filenames and directories can be given as either absolute or relative paths.
 
-`pwd` – print working directory
+Here are the ten utilities you will use most often:
 
 `ls` – list files in current directory
+
+`cd <directory>` – change current directory to `<directory>`
 
 `touch <filename>` – makes a new file
 
 `rm <filename>` – delete a file
-
-`cd <directory>` – change current directory to `<directory>`
-
-`python <filename>.py` – run a Python file
 
 `mkdir <directory>` – create a new directory
 
@@ -98,13 +96,19 @@ Note that in this program reference, filenames and directories can be given as e
 
 `cp <filename1> <filename2>` – copy `<filename1>` to `<filename2>`
 
+`man <program>` – show additional information about the program
+
+Here are a number of other useful utilities:
+
+`pwd` – print working directory
+
+`python <filename>.py` – run a Python file
+
 `cat <filename>` – print the contents of the (entire) file to the screen
 
 `head <filename>` – print the first few lines of a file to the screen
 
 `tail <filename>` – print the last few lines of a file to the screen
-
-`man <program>` – show additional information about the program
 
 `echo <string>` – print `<string>` to the screen (as in, a "string" of letters)
 

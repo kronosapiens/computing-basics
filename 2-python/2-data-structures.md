@@ -17,23 +17,32 @@ Here is an example of a list in action:
 
 ```
 >>> mylist = [1,2,3]
+
 >>> len(mylist)
 3
+
 >>> mylist[0]
 1
+
 >>> mylist[2]
 3
+
 >>> mylist[0:2]
 [1,2]
+
 >>> mylist[3]
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 IndexError: list index out of range
+
 >>> mylist.append('cat')
+
 >>> mylist
 [1, 2, 3, 'cat']
+
 >>> mylist[3]
 'cat'
+
 >>> len(mylist)
 4
 ```
@@ -75,24 +84,34 @@ Here is an example of a dict in action:
 
 ```
 >>> mydict = {'name': 'Daniel Kronovet'}
+
 >>> mydict
 {'name': 'Daniel Kronovet'}
+
 >>> mydict['email'] = 'dbk2123@gmail.com'
+
 >>> mydict
 {'name': 'Daniel Kronovet', 'email': 'dbk2123@gmail.com'}
+
 >>> mydict['ssn']
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 KeyError: 'ssn'
+
 >>> mydict['email']
 'dbk2123@gmail.com'
+
 >>> mydict['email'] = 'kronovet@gmail.com'
+
 >>> mydict['email']
 'kronovet@gmail.com'
+
 >>> len(mydict)
 2
+
 >>> mydict.keys()
 ['name', 'email']
+
 >>> mydict.values()
 ['Daniel Kronovet', 'dbk2123@gmail.com']
 ```

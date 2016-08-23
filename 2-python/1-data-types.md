@@ -12,7 +12,7 @@ Let's consider them in turn.
 
 ### Integers
 
-The integers are the whole numbers. They are core values and [we can represent them very concisely](wiki article). We can add and subtract them very quickly. Both positive and negative numbers are easily represented.
+The integers are the whole numbers. They are core values and [we can represent them very concisely](https://en.wikipedia.org/wiki/Two%27s_complement). We can add and subtract them very quickly. Both positive and negative numbers are easily represented.
 
 Examples:
 

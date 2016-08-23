@@ -6,21 +6,30 @@ Let's see an example of a vector in action:
 
 ```
 > myvec <- c(1, 2, 3)
+
 > length(myvec)
 [1] 3
+
 > myvec[1]
 [1] 1
+
 > myvec[3]
 [1] 3
+
 > myvec[1:2]
 [1] 1 2
+
 > myvec[4]
 [1] NA
+
 > myvec[4] <- 'cat'
+
 > myvec
 [1] "1"   "2"   "3"   "cat"
+
 > myvec[4]
 [1] "cat"
+
 > length(myvec)
 [1] 4
 ```
@@ -45,25 +54,32 @@ Let's see an example of a dataframe in action:
 
 ```
 > names <- c('Keiko', 'Sarah', 'Abe')
+
 > ages <- c(24, 25, 23)
+
 > heights <- c(100, 110, 105)
+
 > students <- data.frame(names, ages, heights)
+
 > students
   names ages heights
 1 Keiko   24     100
 2 Sarah   25     110
 3   Abe   23     105
+
 > students$ages
 [1] 24 25 23
+
 > mean(students$ages)
 [1] 24
+
 > max(students$heights)
 [1] 110
+
 > students[students$ages >= 24,]
   names ages heights
 1 Keiko   24     100
 2 Sarah   25     110
-
 ```
 
 Notice how the dataframe lets us organize all of our data in a single object. Now we can ask questions of our data (mean, max and so on), as well as select subsets of our data based on criteria (24 or older, etc). This is barely scratching the surface; much of your work in data analysis will revolve around dataframes.
