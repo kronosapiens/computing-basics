@@ -5,7 +5,7 @@ To understand the web, let's first get a sense of some of the constraints that s
 1. Computers (often called "nodes") can enter and exit the network any time, without warning.
 2. In general, nodes on the network cannot be trusted, and may be lying.
 3. Messages sent back and forth might be lost or corrupted in transit, unpredictably.
-4. Nodes in the network can be anything; there are no guarantees about the nature or functionality about any comptuer in the network.
+4. Nodes in the network can be anything; there are no guarantees about the nature or functionality about any computer in the network.
 
 Given these constraints, we ultimately see the emergence of several networking principles, which continue to shape the web to this day:
 
