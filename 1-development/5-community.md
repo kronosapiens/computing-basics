@@ -1,4 +1,4 @@
-## Community
+# Community
 
 People often ask, "What programming language should I learn?". To answer the question, we will ask a counter-question: "What do you want to do?".
 
