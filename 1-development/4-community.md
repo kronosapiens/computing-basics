@@ -19,7 +19,7 @@ As an example, let's say I want to save a copy of the Google homepage to my comp
 >>> page = requests.get('https://google.com')
 ```
 
-Here, `[requests](http://docs.python-requests.org/en/master/)` is the name of a popular third-party library used to make HTTP (web) requests in Python, written primarily by Kenneth Reitz.
+Here, [requests](http://docs.python-requests.org/en/master/) is the name of a popular third-party library used to make HTTP (web) requests in Python, written primarily by Kenneth Reitz.
 
 Kenneth Reitz saw a problem: making HTTP requests involved a lot of annoying and complex code. Programmers who needed to do this would spend a lot of time struggling to get their requests to work. They were also generally doing the same thing again and again.
 
